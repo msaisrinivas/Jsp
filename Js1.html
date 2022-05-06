@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			JavaScript | Pass a function as parameter
+		</title>
+	</head>
+	
+	<body style = "text-align:center;">
+		
+		<h1 style = "color:green;" >
+			Hello User
+		</h1>
+		
+		<p>
+			Enter your First name and Last Name.
+		</p>
+		
+        <form action="js1.html" id="formf">
+            First Name:<input type="text" placeholder="First Name" name="firstname"/><br><br>
+            Last Name:<input type="text" placeholder="Last Name" name="lastname"/><br><br>
+        </form>
+		<button onclick="get_alert(get_first)">Submit</button>
+		
+		<script>
+			function get_first(){
+				const form = document.getElementById('formf');
+				var first=form.elements['firstname'].value[0].toUpperCase();
+				var last=form.elements['lastname'].value[0].toUpperCase();
+				var msg = "Hi, Your Intitial is '"+first+last+"'";
+				return msg;
+			}
+			function get_alert(func){
+				alert(func());
+			}
+		</script>
+	</body>
+</html>					
