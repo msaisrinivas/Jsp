@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			JavaScript Assignment 4
+		</title>
+        <style>
+            button{ 
+                font-size:30px; 
+                height:50px; 
+                width:50px;
+
+            }
+
+            .in{
+                background-color:green;
+            }
+
+            .de{
+                background-color:red;
+            }
+        </style>
+	</head>
+	
+	<body style = "text-align:center;">
+		
+		<h1 style = "color:green;" >
+			Hello User
+		</h1>
+        <hr>
+        <div>
+            <h1 >
+                local Storage
+            </h1>
+            <button onclick="inLo()" class="in">+</button>
+            <h2 id='local'></h2>
+            <button onclick="deLo()" class="de">-</button>
+        </div>
+        <hr>
+		<br><br>
+        <hr>
+        <div>
+            <h1 >
+                Session Storage
+            </h1>
+            <button onclick="inSe()" class="in">+</button>
+            <h2 id='session'></h2>
+            <button onclick="deSe()" class="de">-</button>
+        </div>
+        <hr>
+
+		<script>
+             document.getElementById('local').innerHTML = localStorage.getItem('localCount').toString();
+             document.getElementById('session').innerHTML = sessionStorage.getItem('sessionCount').toString();
+
+            function inLo()
+            {
+                var x = +localStorage.getItem('localCount')+1;
+                localStorage.setItem('localCount',x);
+                document.getElementById('local').innerHTML = localStorage.getItem('localCount').toString();
+            }
+
+            function deLo()
+            {
+                var x = +localStorage.getItem('localCount')-1;
+                localStorage.setItem('localCount',x);
+                document.getElementById('local').innerHTML = localStorage.getItem('localCount').toString();
+            }
+
+            function inSe()
+            {
+                var x = +sessionStorage.getItem('sessionCount')+1;
+                sessionStorage.setItem('sessionCount',x);
+                document.getElementById('session').innerHTML = sessionStorage.getItem('sessionCount').toString();
+            }
+
+            function deSe()
+            {
+                var x = +sessionStorage.getItem('sessionCount')-1;
+                sessionStorage.setItem('sessionCount',x);
+                document.getElementById('session').innerHTML = sessionStorage.getItem('sessionCount').toString();
+            }
+		</script>
+	</body>
+</html>					

@@ -1,0 +1,217 @@
+[
+    {
+        "category_name":"Biryani",
+        "menuItems":[
+            {
+                "name": "Veg Biryani",
+                "price": "240.00"
+            },
+            {
+                "name": "Egg Biryani",
+                "price": "280.00"
+            },
+            {
+                "name": "Chicken Dum Biryani",
+                "price": "340.00"
+            },
+            {
+                "name": "Hyderabad Chicken Biryani",
+                "price": "300.00"
+            },
+            {
+                "name": "Beef Biryani",
+                "price": "260.00"
+            },
+            {
+                "name": "Mutton Biryani",
+                "price": "360.00"
+            },
+            {
+                "name": "Jeera Rice",
+                "price": "180.00"
+            }
+        ]
+    },
+    {
+        "category_name":"Non Veg",
+        "menuItems":[
+            {
+                "name": "Chilly Chicken",
+                "price": "130.00"
+            },
+            {
+                "name": "Butter Chicken",
+                "price": "150.00"
+            },
+            {
+                "name": "Chicken Munchuria",
+                "price": "150.00"
+            },
+            {
+                "name": "Chicken Curry",
+                "price": "120.00"
+            },
+            {
+                "name": "Chicken Fry",
+                "price": "140.00"
+            },
+            {
+                "name": "Chicken 65",
+                "price": "140.00"
+            },
+            {
+                "name": "Crispy Chicken",
+                "price": "140.00"
+            },
+            {
+                "name": "Mutton Curry",
+                "price": "240.00"
+            },
+            {
+                "name": "Egg Masala",
+                "price": "80.00"
+            },
+            {
+                "name": "Egg Curry",
+                "price": "40.00"
+            },
+            {
+                "name": "Egg Roast",
+                "price": "80.00"
+            },
+            {
+                "name": "Beef Curry",
+                "price": "120.00"
+            },
+            {
+                "name": "Beef Roast",
+                "price": "130.00"
+            }
+        ]
+    },
+    {
+        "category_name":"Starter",
+        "menuItems":[
+            {
+                "name": "Chicken Lollipop",
+                "price": "140.00"
+            },
+            {
+                "name": "Chicken 65",
+                "price": "140.00"
+            },
+            {
+                "name": "French Fries",
+                "price": "60.00"
+            },
+            {
+                "name": "Chicken Pakoda",
+                "price": "80.00"
+            },
+            {
+                "name": "Paneer Pakoda",
+                "price": "110.00"
+            },
+            {
+                "name": "Panner 65",
+                "price": "140.00"
+            },
+            {
+                "name": "Gobi 65",
+                "price": "110.00"
+            }
+        ]
+    },
+    {
+        "category_name":"Soup",
+        "menuItems":[
+            {
+                "name":"Sweet Corn Veg",
+                "price":"60.00"
+            },
+            {
+                "name":"Chicken Clean Soup",
+                "price":"60.00"
+            },
+            {
+                "name":"Sweet Corn Chicken Soup",
+                "price":"80.00"
+            },
+            {
+                "name": "Tomato Soup",
+                "price": "60.00"
+            }
+        ]
+    },
+    {
+        "category_name":"Beverages",
+        "menuItems":[
+            {
+                "name": "Cool Drink",
+                "price": "80.00"
+            },
+            {
+                "name": "Vanilla Milkshake",
+                "price": "105.00"
+            },
+            {
+                "name": "ButterScotch Milkshake",
+                "price": "120.00"
+            },
+            {
+                "name": "Caramel Nuts Milkshake",
+                "price": "125.00"
+            },
+            {
+                "name": "Fresh Lime",
+                "price": "50.00"
+            }
+        ]
+    },
+    {
+        "category_name":"Desserts",
+        "menuItems":[
+            {
+                "name": "Rasmalai",
+                "price": "80.00"
+            },
+            {
+                "name": "Gulab Jamun",
+                "price": "80.00"
+            },
+            {
+                "name": "Double Ka Metha",
+                "price": "80.00"
+            }
+        ]
+    },
+    {
+        "category_name":"Ice Creams",
+        "menuItems":[
+            {
+                "name": "Vanilla",
+                "price": "60.00"
+            },
+            {
+                "name": "StrawBerry",
+                "price": "80.00"
+            },
+            {
+                "name": "ButterScotch",
+                "price": "80.00"
+            },
+            {
+                "name": "Chocolate Chips",
+                "price": "90.00"
+            },
+            {
+                "name": "Caramel Nuts",
+                "price": "100.00"
+            },
+            {
+                "name": "Fruit Salad With Ice Cream",
+                "price": "150.00"
+            }
+        ]        
+    }
+]
