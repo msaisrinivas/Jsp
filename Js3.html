@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			JavaScript Assignment 3
+		</title>
+	</head>
+    <body>
+        <p></p>
+        <script>
+        //Refactor the following function into a one-liner:
+        const printName = (name) => "Hi " + name;
+        
+        //Rewrite the following code using template literals
+        const printBill = (name, bill) => "Hi " + name + ", please pay: " + bill;
+        
+        //Modify the following code such that the object properties are destructured and logged.
+        const person = {
+            name: "Noam Chomsky",
+            age: 92
+        }
+           
+           let {name,age} = person;
+           let msg;
+           msg = "<hr>"+name +"<br><hr>"+age+"<br><hr>"+printName(name)+"<br><hr>"+printBill(name,458)+"<hr>";
+           document.querySelector('p').innerHTML = msg;
+           console.log(name);
+           console.log(age);
+           console.log(printName(name));
+           console.log(printBill(name,458));
+        </script>
+    </body>
+    </html>

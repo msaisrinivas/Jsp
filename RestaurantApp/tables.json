@@ -1,0 +1,32 @@
+[
+    {
+        "tableName":"Table-1",
+        "foodItems":[],
+        "totalPrice":"0"
+    },
+    {
+        "tableName":"Table-2",
+        "foodItems":[],
+        "totalPrice":"0"
+    },
+    {
+        "tableName":"Table-3",
+        "foodItems":[],
+        "totalPrice":"0"
+    },
+    {
+        "tableName":"Table-4",
+        "foodItems":[],
+        "totalPrice":"0"
+    },
+    {
+        "tableName":"Table-5",
+        "foodItems":[],
+        "totalPrice":"0"
+    },
+    {
+        "tableName":"Table-6",
+        "foodItems":[],
+        "totalPrice":"0"
+    }
+]

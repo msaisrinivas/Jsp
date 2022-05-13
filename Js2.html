@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			JavaScript Assignment 2
+		</title>
+        <p id="te"></p>
+	</head>
+    <body>
+        <script>
+            function getData(uId) {
+                let promise = new Promise((resolve,reject) =>{
+                    setTimeout(() => {
+                        console.log("Fetched the data!");
+                        resolve("skc@gmail.com");
+                    }, 4000);
+                });
+                return promise;
+            }
+            
+            console.log("start");
+            document.getElementById("te").innerHTML="start";
+            getData("skc").then(email =>{
+                console.log("Email id of the user id is: " + email);
+                console.log("end");
+                document.getElementById("te").innerHTML="Fetching Data<br>"+"Email id of the user id is: " + email;
+            }).catch(err => console.log(err));
+            
+            
+        </script>
+    </body>
+
+    
