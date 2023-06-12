@@ -1,185 +1,207 @@
-*, *::after, *::before{
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
-body{
-    background-color: white;
-    overflow: hidden;
+body {
+  background-color: white;
+  overflow: auto;
+  margin: 0px;
 }
 
-.tables{
-    float: left;
-    width: 30%;
-    text-align: center;
-    border-right: solid black;
-    overflow-y: scroll;
-    height: 100vh;
-    font-style: oblique;
+.tables {
+  float: left;
+  width: 30%;
+  text-align: center;
+  border-right: solid black;
+  overflow-y: scroll;
+  height: 100vh;
+  font-style: oblique;
 }
 
-.table:hover{
-    background-color: aliceblue;
+.table:hover {
+  background-color: aliceblue;
 }
 
-.tables h2{
-    text-align: center;
+.tables h2 {
+  text-align: center;
 }
 
-.table{
-    width: 98%;
-    box-shadow: 2px 2px black;
-    text-align: center;
-    padding-left: 20px;
+.table {
+  width: 98%;
+  box-shadow: 2px 2px black;
+  text-align: center;
+  padding-left: 20px;
 }
 
-.logo{
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: larger;
+.logo {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+  font-size: larger;
 }
 
-header h1{
-    padding: 22px;
-    margin: 0px;
-    font-family: italic;
-    color: rgb(255,255,255);
-    background-color: black;
+header h1 {
+  padding: 22px;
+  margin: 0px;
+  font-family: italic;
+  color: rgb(255, 255, 255);
+  background-color: black;
 }
 
-.menu{
-    /* background-image: url('https://cutewallpaper.org/21/restaurant-menu-background/Download-Free-png-Simple-Restaurant-Menu-Background-Material-.webp');
+header .user {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+header .user #logout {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.menu {
+  /* background-image: url('https://cutewallpaper.org/21/restaurant-menu-background/Download-Free-png-Simple-Restaurant-Menu-Background-Material-.webp');
     background-size: 100%;
     background-repeat: no-repeat; */
-    text-align: center;
-    float: right;
-    width: 70%;
-    overflow-y: scroll;
-    padding-left: 2px;
-    padding: 0%;
-    height: 100vh;
-    background-color:rgb(203, 203, 203);
-    font-style: italic;
-    padding-left: 20px;
+  text-align: center;
+  float: right;
+  width: 70%;
+  overflow-y: scroll;
+  padding-left: 2px;
+  padding: 0%;
+  height: 100vh;
+  background-color: rgb(203, 203, 203);
+  font-style: italic;
+  padding-left: 20px;
 }
 
-.search-table{
-    width: 90%;
-    box-shadow: 2px 2px black;
-    height: 50px;
+.search-table {
+  width: 90%;
+  box-shadow: 2px 2px black;
+  height: 50px;
 }
 
-.search-foodItem{
-    width: 90%;
-    box-shadow: 2px 2px black;
-    height: 50px;
+.search-foodItem {
+  width: 90%;
+  box-shadow: 2px 2px black;
+  height: 50px;
 }
 
-.price-itemCount{
-    display: flex;
-    flex-direction: row;
+.price-itemCount {
+  display: flex;
+  flex-direction: row;
 }
 
-.foodItem{
-    text-align: start;
-    box-shadow: 2px 2px black;
-    height: auto;
-    margin: auto;
-    cursor: pointer;
+.foodItem {
+  text-align: start;
+  box-shadow: 2px 2px black;
+  height: auto;
+  margin: auto;
+  cursor: pointer;
 }
 
-.foodItem:hover{
-    background-color: aliceblue
+.foodItem:hover {
+  background-color: aliceblue;
 }
 
-.categoryName{
-    width: fit-content;
-    border: solid rgb(248, 248, 248);
-    border-style: double;
+.categoryName {
+  width: fit-content;
+  border: solid rgb(248, 248, 248);
+  border-style: double;
 }
 
-.modal{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(1.1);
-    transition: visibility 0s linear 0.25s, opacity 0.25s, transform 0.25s;
-    padding: 0;
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s, transform 0.25s;
+  padding: 0;
 }
 
-.modal-content{
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    transform: (-50%,-50%);
-    background-color: white;
-    padding: 0px;
-    width: fit-content;
-    max-width: 70%;
+.modal-content {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: (-50%, -50%);
+  background-color: white;
+  padding: 0px;
+  width: fit-content;
+  max-width: 70%;
 }
 
-header{
-    color: aliceblue;
-    background-color:rgb(39, 120, 131);
-    margin: 0px;
+header {
+  color: aliceblue;
+  background-color: rgb(39, 120, 131);
+  margin: 0px;
 }
 
-section{
-    margin: 10px 20px;
+section {
+  margin: 10px 20px;
 }
 
-.close-button{
-    float: right;
-    text-align: center;
-    cursor: pointer;
-    color: rgb(255,255,255);
+.close-button {
+  float: right;
+  text-align: center;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
 }
 
-.show-modal{
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
-header h3{
-    padding: 10px;
-    margin: 0px;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(255,255,255);
+header h3 {
+  padding: 10px;
+  margin: 0px;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(255, 255, 255);
 }
 
-footer{
-    float: right;
-    margin: 10px 20px;
+footer {
+  float: right;
+  margin: 10px 20px;
 }
 
-td{
-    padding: 10px;
-    text-align: center;
+td {
+  padding: 10px;
+  text-align: center;
 }
 
-input[type=number]::-webkit-inner-spin-button{
-    opacity: 1;
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 1;
 }
 
-.fa-trash{
-    color: gray;
+.fa-trash {
+  color: gray;
 }
 
-
-.gbill{
-    border: solid black 1px; 
-    padding: 5px 5px; 
-    border-radius: 5px;
+.gbill {
+  border: solid black 1px;
+  padding: 5px 5px;
+  border-radius: 5px;
 }
 
-.gbill:hover{
-    background-color: black;
-    color: white;
+.gbill:hover {
+  background-color: black;
+  color: white;
 }
