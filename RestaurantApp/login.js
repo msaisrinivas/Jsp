@@ -6,15 +6,9 @@ const tenantId = "dev-2-nc-gxa";
 const grantType = "http://auth0.com/oauth/grant-type/password-realm";
 const dbconnections = "Username-Password-Authentication";
 
-const loginUrl = window.location.origin + "/restaurant.html";
+const baseUrl = window.location.origin;
 
-//get error query param from url
-const urlParams = new URLSearchParams(window.location.search);
-const error = urlParams.get("error");
-error && alert(error);
-error && window.history.replaceState({}, document.title, "/login.html");
-
-localStorage.setItem("res-isAuthenticated", false);
+const loginUrl = baseUrl + "/restaurant.html";
 
 let b64DecodeUnicode = (str) =>
   decodeURIComponent(
@@ -31,7 +25,9 @@ let parseJwt = (token) =>
     b64DecodeUnicode(token.split(".")[1].replace("-", "+").replace("_", "/"))
   );
 
-const SOCIAL_LOGIN = `https://${domain}/authorize?response_type=token&client_id=${clientId}&connection=google-oauth2&redirect_uri=${loginUrl}&scope=openid%20email`;
+localStorage.setItem("res-isAuthenticated", false);
+
+const SOCIAL_LOGIN = `https://${domain}/authorize?response_type=token&client_id=${clientId}&connection=google-oauth2&redirect_uri=${baseUrl}/login.html&scope=openid%20email`;
 const AUTH0_SIGNUP = `https://${domain}/dbconnections/signup`;
 const AUTH0_SIGNIN = `https://${domain}/oauth/token`;
 const AUTH0_USER_BY_EMAIL = `https://${domain}/api/v2/users-by-email`;
@@ -126,4 +122,53 @@ function onSignup(event) {
       console.error("Error:", error);
       alert("Signup failed");
     });
+}
+
+function onSocialLogin() {
+  window.location.replace(SOCIAL_LOGIN);
+}
+
+async function getUserInfo(token) {
+  await fetch(AUTH0_USER_INFO, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      localStorage.setItem(
+        "res-user",
+        JSON.stringify({
+          email: data.email,
+          name: data.email.split("@")[0],
+          nickname: data.email.split("@")[0],
+          email_verified: data.email_verified,
+        })
+      );
+    }).catch((error) => {
+      console.error("Error:", error);
+      alert("Get user info failed");
+    });
+}
+
+
+//get error query param from url
+const urlParams = new URLSearchParams(window.location.search);
+const error = urlParams.get("error");
+if (error) {
+  alert(error);
+  window.history.replaceState({}, document.title, "/login.html");
+}
+
+//get access_token hash param from url
+const hashParams = new URLSearchParams(window.location.hash.substr(1));
+const accessToken = hashParams.get("access_token");
+if (accessToken) {
+  getUserInfo(accessToken).then(() => {
+    localStorage.setItem("res-isAuthenticated", true);
+    window.location.replace(loginUrl);
+  });
 }

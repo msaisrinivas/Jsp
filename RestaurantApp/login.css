@@ -41,3 +41,11 @@ form a {
   color: #1951f7;
   font-weight: bolder;
 }
+
+
+form .google-signin{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
