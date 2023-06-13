@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Application</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div>
+        <h1>Signin to the Restaurant Application</h1>
+        <form action="" onsubmit="onSignup(event)">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your Name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter your Email Id">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter your password">
+            <span>
+                <input type="submit" value="Sign In">
+                <a href="/login.html">Already have an acccount? Login</a>
+            </span>
+            <p class="google-signin" onclick="onSocialLogin()">
+                Signin With Google
+            </p>
+        </form>
+    </div>
+</body>
+<script src="login.js"></script>
+
+</html>

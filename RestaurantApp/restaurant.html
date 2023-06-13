@@ -1,51 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="restaurant.css">
-        <title>Restaurant Application</title>
-    </head>
-    <body>
-        <div class="logo" id="logo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="restaurant.css">
+    <title>Restaurant Application</title>
+</head>
+
+<body>
+    <div class="logo" id="logo">
+        <header>
+            <h1>Restaurant Application</h1>
+            <div class="user">
+                <span id="user-name"></span>
+                <span id="logout" onclick="logout()">Logout <img src="/assets/logout.png" alt="logout"
+                        style="height: 20px;width: 20px;"> </span>
+            </div>
+        </header>
+    </div>
+    <div class="tables" id="tables">
+        <h2>Tables</h2>
+        <input type="text" class="search-table" id="search-table" placeholder="Search table">
+    </div>
+
+    <div class="menu" id="menu">
+        <h2>Menu</h2>
+        <input type="text" class="search-foodItem" id="search-foodItem"
+            placeholder="Search menu..... by course, by food">
+    </div>
+
+    <div class="modal">
+        <div class="modal-content">
             <header>
-                <h1>Restaurant Application</h1>
+                <h3><span id="bill_heading">Table-Name | Order Details</span><span class="close-button">&times;</span>
+                </h3>
             </header>
-        </div>
-        <div class="tables" id="tables">
-            <h2>Tables</h2>
-            <input type="text" class="search-table" id="search-table" placeholder="Search table">
-        </div>
-
-        <div class="menu" id="menu">
-            <h2>Menu</h2>
-            <input type="text" class="search-foodItem" id="search-foodItem" placeholder="Search menu..... by course, by food">
-        </div>
-
-       <div class="modal">
-           <div class="modal-content">
-               <header>
-                   <h3><span id="bill_heading">Table-Name | Order Details</span><span class="close-button">&times;</span></h3>
-               </header>
-               <section>
-                   <table id="table_bill">
-                       <tr style="font-weight: bold;">
+            <section>
+                <table id="table_bill">
+                    <tr style="font-weight: bold;">
                         <td>S. No</td>
                         <td>Item</td>
                         <td>Price</td>
                         <td>Number of Servings</td>
                         <td></td>
-                       </tr>
-                   </table>
-               </section>
-               <footer>
-                    <div class = "gbill" onclick="resetTable(event)">GENERATE BILL</div>
-               </footer>
-           </div>
-       </div>
-       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    </body>
-    <script src="restaurant.js"></script>
+                    </tr>
+                </table>
+            </section>
+            <footer>
+                <div class="gbill" onclick="resetTable(event)">GENERATE BILL</div>
+            </footer>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+<script src="restaurant.js"></script>
+
 </html>
